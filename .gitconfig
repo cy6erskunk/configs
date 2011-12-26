@@ -1,8 +1,12 @@
+[user]
+	name = Igor Shevchenko
+	email = cyberskunk@gmail.com
 [alias]
 	co = checkout
 	st = status
 	di = diff
 	ci = commit
+	log1 = log --pretty=\"%Cred%h%Creset %C(cyan)%s, %Cgreen%an%Creset, %C(yellow)%cr\" --graph
 [color]
 	branch = auto
 	diff = auto
