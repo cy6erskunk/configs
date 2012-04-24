@@ -13,15 +13,17 @@ set expandtab " заменять табы на пробелы
 set ai " autoindent
 set smartindent
 
-if has("gui_running")
+" use 256 colors in terminal - we're in 21st century, aren't we?
+set t_Co=256
+"if has("gui_running")
     " use zenburn theme in gvim
     colorscheme zenburn
-else
-    "in xterm with black background
-    " use default theme with light background
-    set bg=light
-    colorscheme default
-endif
+"else
+    ""in xterm with black background
+    ""use default theme with light background
+    "set bg=light
+    "colorscheme default
+"endif
 
 set dir=~/tmp " хранить swp файлы в ~/tmp
 
