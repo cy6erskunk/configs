@@ -13,7 +13,16 @@ set expandtab " заменять табы на пробелы
 set ai " autoindent
 set smartindent
 
-set bg=light " светлый фон
+if has("gui_running")
+    " use zenburn theme in gvim
+    colorscheme zenburn
+else
+    "in xterm with black background
+    " use default theme with light background
+    set bg=light
+    colorscheme default
+endif
+
 set dir=~/tmp " хранить swp файлы в ~/tmp
 
 set list " показывать спецсимволы
