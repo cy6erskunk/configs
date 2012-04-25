@@ -99,6 +99,7 @@ call pathogen#runtime_append_all_bundles()
 
 " assign custon filetypes for highlighting
 au BufRead,BufNewFile *.hbs set filetype=html
+au BufRead,BufNewFile *.hbsp set filetype=html
 
 " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.
 if has("autocmd")
