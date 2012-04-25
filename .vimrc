@@ -7,7 +7,7 @@ filetype indent on
 syntax on " Подсветка синтаксиса
 set sw=4 " Сдвиг при использовании > или <
 set ts=4 " Размер tab
-set softtabstop=3
+set softtabstop=4
 set expandtab " заменять табы на пробелы
 
 set ai " autoindent
