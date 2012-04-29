@@ -53,7 +53,7 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-P_TMP='PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;33m\]@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w$(fnCheckSVNStatus)\[\033[01;31m\]\$\[\033[00m\]";'
+P_TMP='PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;33m\]@\[\033[01;32m\]\h\[\033[00m\]:\$\[\033[00m\]";'
 PROMPT_COMMAND="$PROMPT_COMMAND;$P_TMP"
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -92,7 +92,7 @@ fi
 export LC_ALL="en_US.UTF-8"
 export EDITOR="/usr/bin/vim"
 
-[[ $- == *i* ]]   &&   . $HOME/git-prompt/git-prompt.sh
+[ -d $HOME/git-prompt ] && [[ $- == *i* ]]   &&   . $HOME/git-prompt/git-prompt.sh
 
 if [ -f ~/.bashrc_local ]
 then
