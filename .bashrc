@@ -81,7 +81,7 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 alias l='ls -al'
-alias agrep='ack-grep'
+alias agrep='ack'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -93,6 +93,19 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR="/usr/bin/vim"
 
 [ -d $HOME/git-prompt ] && [[ $- == *i* ]]   &&   . $HOME/git-prompt/git-prompt.sh
+
+
+if [ -f /etc/X11/Xsession.d/90gpg-agent ]; then
+    source /etc/X11/Xsession.d/90gpg-agent
+    export GPG_TTY=`tty`
+  
+    if [ -f $HOME/.gpg-agent-info ]; then
+        . "$HOME/.gpg-agent-info"
+        export GPG_AGENT_INFO
+    else
+        eval $(gpg-agent --daemon --write-env-file $HOME/.gpg-agent-info)
+    fi
+fi
 
 if [ -f ~/.bashrc_local ]
 then
