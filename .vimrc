@@ -32,6 +32,9 @@ set ruler " показывать номера строк и стобцов вн�
 set showcmd
 set showmode " показывать текущий режим
 set laststatus=2 "always show status bar
+set statusline=%<%2*%f%*\ %{&ff}\ %{&encoding}\ %y%h%m%r\ %{fugitive#statusline()}%=%1*0x%03B%*\ %-14.(%l,%c%V%)\ %P
+hi User1 term=bold,reverse cterm=bold,reverse ctermfg=236 ctermbg=031 gui=bold,reverse
+hi User2 term=bold,reverse cterm=bold,reverse ctermfg=236 ctermbg=040 gui=bold,reverse
 
 set showmatch
 
@@ -62,13 +65,15 @@ nnoremap <leader>v <C-w>v<C-w>l
 imap <leader><tab> <C-x><C-o>
 
 " Маппинги
-:nmap e :tabnew 
+:nmap <leader>e :tabnew 
 :nmap <ENTER> :
 :nmap <SPACE> :!
 :imap jj <esc>
 
-:nmap <Tab> <C-w>w
-:nmap <S-Tab> <C-w>W
+:nmap <Tab> :tabn<CR>
+:nmap <S-Tab> :tabp<CR>
+":nmap <Tab> <C-w>w
+":nmap <S-Tab> <C-w>W
 
 :nmap <F2> :w<CR>
 :nmap <silent> <F3> :%s/^ \+$//\|:%s/ \+$//<CR>
@@ -100,6 +105,7 @@ call pathogen#runtime_append_all_bundles()
 " assign custon filetypes for highlighting
 au BufRead,BufNewFile *.hbs set filetype=html
 au BufRead,BufNewFile *.hbsp set filetype=html
+au BufRead,BufNewFile *.coffee set filetype=javascript
 
 " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.
 if has("autocmd")
