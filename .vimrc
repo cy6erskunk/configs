@@ -66,7 +66,7 @@ nnoremap <leader>v <C-w>v<C-w>l
 imap <leader><tab> <C-x><C-o>
 
 " Маппинги
-:nmap <leader>n :tabnew
+:nmap <leader>n :tabnew 
 :nmap <ENTER> :
 :nmap <SPACE> :!
 :imap jj <esc>
@@ -79,7 +79,7 @@ imap <leader><tab> <C-x><C-o>
 
 :nmap <F2> :w<CR>
 :nmap <silent> <F3> :%s/^ \+$//\|:%s/ \+$//<CR>
-:nmap <F4> :tabnew
+:nmap <F4> :tabnew 
 :nmap <F6> :NERDTree<CR>
 :nmap <F7> :tabp<CR>
 :nmap <F8> :tabn<CR>
