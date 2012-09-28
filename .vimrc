@@ -27,6 +27,7 @@ set t_Co=256
 
 set dir=~/tmp " хранить swp файлы в ~/tmp
 
+set bs=2
 set list " показывать спецсимволы
 set ruler " показывать номера строк и стобцов внизу экрана
 set showcmd
@@ -61,11 +62,11 @@ set wildmode=list:longest
 nnoremap <leader>ft Vatzf
 "Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
-"Map code completion to leader + tab
+"Map code completion to , + tab
 imap <leader><tab> <C-x><C-o>
 
 " Маппинги
-:nmap <leader>n :tabnew 
+:nmap <leader>n :tabnew
 :nmap <ENTER> :
 :nmap <SPACE> :!
 :imap jj <esc>
@@ -74,6 +75,7 @@ imap <leader><tab> <C-x><C-o>
 :nmap <S-Tab> :tabp<CR>
 ":nmap <Tab> <C-w>w
 ":nmap <S-Tab> <C-w>W
+:nmap <silent> <leader>s :%s/[ ]\+$//e<CR>
 
 :nmap <F2> :w<CR>
 :nmap <silent> <F3> :%s/^ \+$//\|:%s/ \+$//<CR>
