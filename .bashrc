@@ -80,7 +80,8 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
-alias l='ls -al'
+alias l='ls -l'
+alias ll='ls -al'
 alias agrep='ack'
 
 # enable programmable completion features (you don't need to enable

@@ -61,11 +61,11 @@ set wildmode=list:longest
 nnoremap <leader>ft Vatzf
 "Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
-"Map code completion to , + tab
+"Map code completion to leader + tab
 imap <leader><tab> <C-x><C-o>
 
 " Маппинги
-:nmap <leader>e :tabnew 
+:nmap <leader>n :tabnew 
 :nmap <ENTER> :
 :nmap <SPACE> :!
 :imap jj <esc>
