@@ -1,10 +1,27 @@
 set nocompatible " зачем совместимость с vi?
 
-filetype on
+filetype off " required by vundle
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+
 filetype plugin on
 filetype indent on
 
 syntax on " Подсветка синтаксиса
+
 set sw=4 " Сдвиг при использовании > или <
 set ts=4 " Размер tab
 set softtabstop=4
@@ -27,8 +44,9 @@ set t_Co=256
 
 set dir=~/tmp " хранить swp файлы в ~/tmp
 
-set bs=2
+set bs=1
 set list " показывать спецсимволы
+set number
 set ruler " показывать номера строк и стобцов внизу экрана
 set showcmd
 set showmode " показывать текущий режим
@@ -48,7 +66,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-set grepprg=ack-grep
+set grepprg=ack
 set grepformat=%f:%l:%c:%m
 
 set foldenable
@@ -75,16 +93,8 @@ imap <leader><tab> <C-x><C-o>
 :nmap <S-Tab> :tabp<CR>
 ":nmap <Tab> <C-w>w
 ":nmap <S-Tab> <C-w>W
-:nmap <silent> <leader>s :%s/[ ]\+$//e<CR>
-
-:nmap <F2> :w<CR>
-:nmap <silent> <F3> :%s/^ \+$//\|:%s/ \+$//<CR>
-:nmap <F4> :tabnew 
-:nmap <F6> :NERDTree<CR>
-:nmap <F7> :tabp<CR>
-:nmap <F8> :tabn<CR>
-:nmap <F10> :bw<CR>
-:nmap <S-F10> :xa<CR>
+:nmap <leader>ff :FufFile<CR>
+:nmap <leader>t :FufCoverageFile<CR>
 
 "Bubble single lines (kicks butt)
 "http://vimcasts.org/episodes/bubbling-text/
@@ -100,9 +110,6 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-
-" Зовем pathogen
-call pathogen#runtime_append_all_bundles()
 
 " assign custon filetypes for highlighting
 au BufRead,BufNewFile *.hbs set filetype=html
