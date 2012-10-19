@@ -44,7 +44,7 @@ set t_Co=256
 
 set dir=~/tmp " хранить swp файлы в ~/tmp
 
-set bs=1
+set bs=2
 set list " показывать спецсимволы
 set number
 set ruler " показывать номера строк и стобцов внизу экрана
