@@ -38,11 +38,13 @@ echo ===Getting Vim bundles...
 if [ -d .vim ]
 then
     cd .vim
-    make
+    make vundle
+    make plugins
     cd $pwd
 fi
 echo Done
 
+# Just in case initial 'git-clone' was called without '--recursive'
 echo ===Getting git-prompt...
 git submodule init
 git submodule update
