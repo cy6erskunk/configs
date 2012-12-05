@@ -33,6 +33,15 @@ do
 done
 echo Done
 
+echo ===Creating ~/tmp folder
+if [ -e ~/tmp ]
+then
+    echo "${tab}~/tmp already exists"
+else
+    mkdir ~/tmp
+    echo Done
+fi
+
 echo ===Getting Vim bundles...
 
 if [ -d .vim ]
