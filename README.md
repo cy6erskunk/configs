@@ -50,3 +50,5 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
 2. There's `.bashrc_local` file, empty by default, which is executed from `.bashrc` - it is a good place to put your local functions etc.
 
 3. In older git versions there're problems with git submodules, it seems that everything OK since version 1.6.2
+
+4. `_sublime2_Packages_User` folder for now is just a snapshot of my useful settings files for Sublime Text 2, which should be copied to `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/` folder (on Mac)

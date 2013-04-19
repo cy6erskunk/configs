@@ -1,0 +1,4 @@
+{
+    "cmd": [ "csso", "-o", "${file_path}/${file_base_name}.min.css", "-i", "$file"],
+   "selector": "source.css"
+}
