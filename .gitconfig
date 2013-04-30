@@ -1,3 +1,5 @@
+[push]
+	default = simple
 [user]
 	name = Igor Shevchenko
 	email = cy6erskunk@example.com
