@@ -2,6 +2,14 @@
 files='.vimrc .gitconfig .bashrc .bash_aliases git-prompt.conf'
 dirs='.vim git-prompt'
 
+echo Enter your git name:
+read git_name
+echo Enter your git email:
+read git_email
+sed -e "s/%%GIT_NAME%%/${git_name}/;s/%%GIT_EMAIL%%/${git_email}/" < ./_gitconfig > ./.gitconfig
+
+echo name: $git_name email: $git_email
+
 tab=$'\t'
 ttab="$tab$tab$tab"
 pwd=`pwd`
@@ -47,7 +55,6 @@ echo ===Getting Vim bundles...
 if [ -d .vim ]
 then
     cd .vim
-    make vundle
     make plugins
     cd $pwd
 fi

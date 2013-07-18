@@ -1,8 +1,8 @@
 [push]
 	default = simple
 [user]
-	name = Igor Shevchenko
-	email = cy6erskunk@example.com
+	name = %%GIT_NAME%%
+	email = %%GIT_EMAIL%%
 [alias]
 	co = checkout
 	st = status

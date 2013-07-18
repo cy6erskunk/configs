@@ -12,7 +12,11 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
 
     ```cd configs && . ./install.sh```
 
+    Enter your name and email to filled in `.gitconfig` when prompted
+
     The installer does:
+    - creates `.gitgonfig` file with some defaults and `user.name`, `user.email` filled
+      with data provided
     - creates symlinks to files and folders in `configs` dir (if such file or folder does not exist in home folder)
         - files
             * .vimrc
