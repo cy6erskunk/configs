@@ -1,0 +1,11 @@
+alias ll='ls -oA'
+alias agrep='ack'
+
+alias gst='git status'
+alias gco='git checkout'
+alias gci='git commit'
+alias gad='git add'
+alias gaa='git add .'
+alias gdi='git diff'
+alias gpl='git pull origin'
+alias gps='git push origin'

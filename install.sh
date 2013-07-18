@@ -1,5 +1,5 @@
 #!/bin/bash
-files='.vimrc .gitconfig .bashrc git-prompt.conf'
+files='.vimrc .gitconfig .bashrc .bash_aliases git-prompt.conf'
 dirs='.vim git-prompt'
 
 tab=$'\t'
