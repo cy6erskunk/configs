@@ -1,0 +1,16 @@
+[push]
+	default = simple
+[user]
+	name = %%GIT_NAME%%
+	email = %%GIT_EMAIL%%
+[alias]
+	co = checkout
+	st = status
+	di = diff
+	ci = commit
+	log1 = log --pretty=\"%Cred%h%Creset %C(cyan)%s, %Cgreen%an%Creset, %C(yellow)%cr\" --graph
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
