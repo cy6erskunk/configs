@@ -1,5 +1,5 @@
 #!/bin/bash
-files='.vimrc .gitconfig .bashrc .bash_aliases git-prompt.conf'
+files='.vimrc .gitconfig .bashrc .bash_aliases git-prompt.conf .tmux.conf'
 dirs='.vim git-prompt'
 
 if [[  $1 != '--no-gitconfig' ]]
