@@ -2,13 +2,16 @@
 files='.vimrc .gitconfig .bashrc .bash_aliases git-prompt.conf'
 dirs='.vim git-prompt'
 
-echo Enter your git name:
-read git_name
-echo Enter your git email:
-read git_email
-sed -e "s/%%GIT_NAME%%/${git_name}/;s/%%GIT_EMAIL%%/${git_email}/" < ./_gitconfig > ./.gitconfig
+if [[  $1 != '--no-gitconfig' ]]
+then
+    echo Enter your git name:
+    read git_name
+    echo Enter your git email:
+    read git_email
+    sed -e "s/%%GIT_NAME%%/${git_name}/;s/%%GIT_EMAIL%%/${git_email}/" < ./_gitconfig > ./.gitconfig
 
-echo name: $git_name email: $git_email
+    echo name: $git_name email: $git_email
+fi
 
 tab=$'\t'
 ttab="$tab$tab$tab"
