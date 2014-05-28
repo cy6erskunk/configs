@@ -5,7 +5,7 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
 ## Installation
 1. Clone repo to your home directory:
 
-    ```https://github.com/cy6erskunk/configs.git -b vundle --recursive```
+    ```https://github.com/cy6erskunk/configs.git --recursive```
 
     It is assumed by the installtion script, that repo is cloned to `~/configs`, which is done by default.
 2. cd to the `configs` folder and run `install.sh`:
