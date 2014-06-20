@@ -75,4 +75,10 @@ if [ -e "${SUBLIME}" ] && [ -x "${SUBLIME}" ] && [ ! -e "${SUBLIME_BIN}" ]; then
     ln -s "${SUBLIME}" "${SUBLIME_BIN}"
 fi
 
+if [ -e $HOME/.bash_profile ]; then
+    echo .bash_profile already exists, try addding \'. .bashrc\' to its contents
+else
+    ln -s $HOME/.bashrc $HOME/.bash_profile
+fi
+
 echo Done

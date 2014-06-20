@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# let /usr/local/bin go before /usr/bin, for brew
+export PATH=/usr/local/bin:$PATH
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 # ... and ignore same sucessive entries.
@@ -117,3 +119,6 @@ function fixssh {
         fi
     done
 }
+
+# brew's nvm stuff
+source $(brew --prefix nvm)/nvm.sh

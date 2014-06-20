@@ -12,7 +12,8 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
 
     ```cd configs && . ./install.sh```
 
-    Enter your name and email to filled in `.gitconfig` when prompted
+    Enter your name and email to filled in `.gitconfig` when prompted (add --no-gitconfig
+    to `install.sh` call to skip git user name and email setting)
 
     The installer does:
     - creates `.gitgonfig` file with some defaults and `user.name`, `user.email` filled
@@ -34,6 +35,7 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
       - L9
       - FuzzyFinder
     - tries to get submodules (just in case initial `git-clone` was called without `--recursive`)
+    - tries to symlink ~/.bash_profile to ~/.bashrc
 
 
 ## Misc
