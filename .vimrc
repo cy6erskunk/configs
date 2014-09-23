@@ -16,6 +16,7 @@ Bundle 'Lokaltog/vim-easymotion'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'vim-scripts/xml.vim'
 
 filetype plugin on
 filetype indent on

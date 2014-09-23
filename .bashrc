@@ -117,3 +117,5 @@ function fixssh {
         fi
     done
 }
+[[ -s `brew --prefix nvm`/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
