@@ -70,4 +70,10 @@ git submodule update
 
 [[ -r ./subl.sh ]] && . /subl.sh
 
+if [ -e $HOME/.bash_profile ]; then
+    echo .bash_profile already exists, try addding \'. .bashrc\' to its contents
+else
+    ln -s $HOME/.bashrc $HOME/.bash_profile
+fi
+
 echo Done
