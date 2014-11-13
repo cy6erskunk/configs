@@ -1,5 +1,5 @@
 .PHONY xxx
-xxx
+	xxx
 
 w
 	poo 1 2
