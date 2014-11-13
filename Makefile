@@ -11,15 +11,6 @@
 	}
 </script>
 
-<div id="firstBlock" class="col-md-7">
-	<div class="form-group">
-		@Html.LabelFor(m => m.OrderNo, new { @class = "col-md-2 control-label" })
-		<div class="col-md-10">
-			@Html.TextBoxFor(x => x.OrderNo, new { @readonly = "true", @class = "form-control" })
-			@Html.ValidationMessageFor(m => m.OrderNo, "", new { @class = "text-danger" })
-		</div>
-	</div>
-
 	<div class="form-group">
 		@Html.LabelFor(m => m.SellerId, new { @class = "col-md-2 control-label" })
 		<div class="col-md-4">
