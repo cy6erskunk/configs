@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump)
+plugins=(git autojump vagrant meteor go)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,3 +79,5 @@ export NVM_DIR=~/.nvm
 ## do not forget to run `nvm alias default XXX` to avoid enabling 
 ## that version every login
 source $(brew --prefix nvm)/nvm.sh
+[[ -e /usr/local/go/bin ]] && export PATH=$PATH:/usr/local/go/bin
+[[ -e $HOME/go ]] && export GOPATH=$HOME/go
