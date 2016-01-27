@@ -8,7 +8,12 @@
 	st = status
 	di = diff
 	ci = commit
+	br = branch
 	log1 = log --pretty=\"%Cred%h%Creset %C(cyan)%s, %Cgreen%an%Creset, %C(yellow)%cr\" --graph
+# `git pr 33 pr-33` creates branch `pr-33` with PR #33 from remote `origin`
+	pr = !sh -c 'git fetch origin pull/${1}/head:${2}' -
+# `git prr origin 33 pr-33` creates branch `pr-33` with PR #33 from remote `origin`
+	prr = !sh -c 'git fetch ${1} pull/${2}/head:${3}' -
 [color]
 	branch = auto
 	diff = auto
