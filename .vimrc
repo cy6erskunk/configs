@@ -52,7 +52,15 @@ set ruler " показывать номера строк и стобцов вн�
 set showcmd
 set showmode " показывать текущий режим
 set laststatus=2 "always show status bar
-set statusline=%<%2*%f%*\ %{&ff}\ %{&encoding}\ %y%h%m%r\ %{fugitive#statusline()}%=%1*0x%03B%*\ %-14.(%l,%c%V%)\ %P
+function! ShowUtf8Sequence()
+    let p = getpos('.')
+    redir => utfseq
+    sil normal! g8
+    redir End
+    call setpos('.', p)
+    return matchstr(utfseq, '\x .*\x')
+endfunction
+set statusline=%<%2*%f%*\ %{&ff}\ %{&encoding}\ %y%h%m%r\ %{fugitive#statusline()}%=%1*0x%03B%-5{ShowUtf8Sequence()}%*\ %-14.(%l,%c%V%)\ %P
 hi User1 term=bold,reverse cterm=bold,reverse ctermfg=236 ctermbg=031 gui=bold,reverse
 hi User2 term=bold,reverse cterm=bold,reverse ctermfg=236 ctermbg=040 gui=bold,reverse
 
@@ -85,32 +93,38 @@ nnoremap <leader>v <C-w>v<C-w>l
 imap <leader><tab> <C-x><C-o>
 
 " Маппинги
-:nmap <leader>n :tabnew 
-:nmap <ENTER> :
-:nmap <SPACE> :!
-:imap jj <esc>
+:nnoremap <leader>n :tabnew 
+:nnoremap <ENTER> :
+:nnoremap <SPACE> :!
+:inoremap jj <esc>
 
-:nmap <Tab> :tabn<CR>
-:nmap <S-Tab> :tabp<CR>
+:nnoremap <Tab> :tabn<CR>
+:nnoremap <S-Tab> :tabp<CR>
 ":nmap <Tab> <C-w>w
 ":nmap <S-Tab> <C-w>W
-:nmap <leader>ff :FufFile<CR>
-:nmap <leader>t :FufCoverageFile<CR>
+:nnoremap <leader>ff :FufFile<CR>
+:nnoremap <leader>t :FufCoverageFile<CR>
 
 "Bubble single lines (kicks butt)
 "http://vimcasts.org/episodes/bubbling-text/
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
+nnoremap <C-Up> ddkP
+nnoremap <C-Down> ddp
+nnoremap <C-Down> ddp
+
+inoremap <C-d> <ESC>ddi
+inoremap <C-k> <ESC>ddkPi
+inoremap <C-j> <ESC>ddpi
+inoremap <C-u> <ESC>viwUea
 
 "Bubble multiple lines
-vmap <C-Up> xkP`[V`]
-vmap <C-Down> xp`[V`]
+vnoremap <C-Up> xkP`[V`]
+vnoremap <C-Down> xp`[V`]
 
 " easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " assign custon filetypes for highlighting
 au BufRead,BufNewFile *.hbs set filetype=html
