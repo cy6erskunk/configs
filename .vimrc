@@ -109,11 +109,15 @@ imap <leader><tab> <C-x><C-o>
 "http://vimcasts.org/episodes/bubbling-text/
 nnoremap <C-Up> ddkP
 nnoremap <C-Down> ddp
-nnoremap <C-Down> ddp
 
+" insert mode mappings
+" delete line
 inoremap <C-d> <ESC>ddi
+" move line up
 inoremap <C-k> <ESC>ddkPi
+" move line down
 inoremap <C-j> <ESC>ddpi
+" change current word to uppercase
 inoremap <C-u> <ESC>viwUea
 
 "Bubble multiple lines
