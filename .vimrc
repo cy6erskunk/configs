@@ -93,17 +93,17 @@ nnoremap <leader>v <C-w>v<C-w>l
 imap <leader><tab> <C-x><C-o>
 
 " Маппинги
-:nnoremap <leader>n :tabnew 
-:nnoremap <ENTER> :
-:nnoremap <SPACE> :!
-:inoremap jj <esc>
+nnoremap <leader>n :tabnew 
+nnoremap <ENTER> :
+nnoremap <SPACE> :!
+inoremap jj <esc>
 
-:nnoremap <Tab> :tabn<CR>
-:nnoremap <S-Tab> :tabp<CR>
+nnoremap <Tab> :tabn<CR>
+nnoremap <S-Tab> :tabp<CR>
 ":nmap <Tab> <C-w>w
 ":nmap <S-Tab> <C-w>W
-:nnoremap <leader>ff :FufFile<CR>
-:nnoremap <leader>t :FufCoverageFile<CR>
+nnoremap <leader>ff :FufFile<CR>
+nnoremap <leader>t :FufCoverageFile<CR>
 
 "Bubble single lines (kicks butt)
 "http://vimcasts.org/episodes/bubbling-text/
