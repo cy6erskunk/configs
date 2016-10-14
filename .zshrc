@@ -81,3 +81,8 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 [[ -e /usr/local/go/bin ]] && export PATH=$PATH:/usr/local/go/bin
 [[ -e $HOME/go ]] && export GOPATH=$HOME/go
+
+if [ -f ~/.zshrc_local ]
+then
+   source ~/.zshrc_local
+fi
