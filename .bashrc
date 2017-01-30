@@ -120,5 +120,6 @@ function fixssh {
     done
 }
 
-[[ -s `brew --prefix nvm`/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
