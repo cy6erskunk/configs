@@ -78,7 +78,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 export NVM_DIR="$HOME/.nvm"
 ## do not forget to run `nvm alias default XXX` to avoid enabling 
 ## that version every login
-. "/usr/local/opt/nvm/nvm.sh"
+[[ -e /usr/local/opt/nvm/nvm.sh ]] && . "/usr/local/opt/nvm/nvm.sh"
 [[ -e /usr/local/go/bin ]] && export PATH=$PATH:/usr/local/go/bin
 [[ -e $HOME/go ]] && export GOPATH=$HOME/go
 export P4CONFIG=.p4config
@@ -87,3 +87,4 @@ if [ -f ~/.zshrc_local ]
 then
    source ~/.zshrc_local
 fi
+[ $(command -v nodenv) ] && eval "$(nodenv init -)"
