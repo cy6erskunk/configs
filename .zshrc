@@ -6,7 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="smt"
+ZSH_THEME="spaceship"
+# ZSH_THEME="smt"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -88,3 +89,6 @@ then
    source ~/.zshrc_local
 fi
 [ $(command -v nodenv) ] && eval "$(nodenv init -)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
