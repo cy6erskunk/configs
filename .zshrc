@@ -75,20 +75,37 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 #
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
+
 #########
-export NVM_DIR="$HOME/.nvm"
+# nmv (do not use together with nodenv)
+#########
+#export NVM_DIR="$HOME/.nvm"
 ## do not forget to run `nvm alias default XXX` to avoid enabling 
 ## that version every login
-[[ -e /usr/local/opt/nvm/nvm.sh ]] && . "/usr/local/opt/nvm/nvm.sh"
-[[ -e /usr/local/go/bin ]] && export PATH=$PATH:/usr/local/go/bin
-[[ -e $HOME/go ]] && export GOPATH=$HOME/go
-export P4CONFIG=.p4config
-
-if [ -f ~/.zshrc_local ]
-then
-   source ~/.zshrc_local
-fi
+#[[ -e /usr/local/opt/nvm/nvm.sh ]] && . "/usr/local/opt/nvm/nvm.sh"
+#########
+# nodenv (do not use together with nvm)
+#########
 [ $(command -v nodenv) ] && eval "$(nodenv init -)"
 
+#########
+# go
+#########
+[[ -e /usr/local/go/bin ]] && export PATH=$PATH:/usr/local/go/bin
+[[ -e $HOME/go ]] && export GOPATH=$HOME/go
+
+#########
+# perforce p4
+#########
+export P4CONFIG=.p4config
+
+#########
+# rbenv (do not use together with rvm)
+#########
+[ $(command -v rbenv) ] && eval "$(rbenv init -)"
+#########
+# rvm (do not use together with rbenv)
+#########
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
