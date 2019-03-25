@@ -76,6 +76,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 #
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
+[[ -f ~/.zshrc_aliases ]] && source ~/.zshrc_aliases
 
 #########
 # nmv (do not use together with nodenv)
@@ -89,6 +90,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 #########
 [ $(command -v nodenv) ] && eval "$(nodenv init -)"
 
+export PATH=$PATH:"/Users/$(whoami)/.local/bin"
 #########
 # go
 #########
