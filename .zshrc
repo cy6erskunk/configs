@@ -10,7 +10,7 @@ ZSH_THEME="spaceship"
 # ZSH_THEME="smt"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -90,7 +90,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 #########
 [ $(command -v nodenv) ] && eval "$(nodenv init -)"
 
-export PATH=$PATH:"/Users/$(whoami)/.local/bin"
 #########
 # go
 #########
