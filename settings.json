@@ -1,34 +1,29 @@
 {
-    "workbench.colorTheme": "Default Dark+",
+    "breadcrumbs.enabled": true,
+
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
     "editor.rulers": [
         80
     ],
-    "window.zoomLevel": 0,
-    "workbench.iconTheme": "vscode-icons",
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+
     "eslint.autoFixOnSave": true,
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "[json]": {
-        "editor.formatOnSave": false
-    },
     "eslint.alwaysShowStatus": true,
-    "vsicons.dontShowNewVersionMessage": true,
+
+    "emmet.triggerExpansionOnTab": true,
+
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.keymap": "alternate",
-    "terminal.integrated.rendererType": "dom",
-    "breadcrumbs.enabled": true,
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
-    "workbench.sideBar.location": "right",
-    "emmet.triggerExpansionOnTab": true,
+
     "indentRainbow.colors": [
         "rgba(16,16,16,0.1)",
         "rgba(16,16,16,0.2)",
@@ -40,5 +35,23 @@
         "rgba(16,16,16,0.8)",
         "rgba(16,16,16,0.9)",
         "rgba(16,16,16,1.0)"
-    ]
+    ],
+    "terminal.integrated.rendererType": "dom",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "right",
+
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[json]": {
+        "editor.formatOnSave": false
+    },
+
+    "[jsonc]": {
+        "editor.formatOnSave": false
+    },
 }
