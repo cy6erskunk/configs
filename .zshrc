@@ -110,3 +110,11 @@ export P4CONFIG=.p4config
 #########
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
+#########
+# Function to find parent Docker images to get rif of the following error:
+# conflict: unable to delete xxx (cannot be forced) - image has dependent child images
+#########
+docker_parents(){
+    [ $# -eq 0 ] && { echo "Usage: $0 image_hash"; return 1; }
+    for i in $(docker images -q); do docker history $i|grep -q $1 && echo $i; done | sort -u
+}
