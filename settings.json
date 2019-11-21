@@ -12,8 +12,24 @@
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
 
+/* disable vscode js validation to use eslint: */
+    // "javascript.validate.enable": false,
+/* disable vscode TS validation to use eslint: */
+    // "typescript.validate.enable": false,
     "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+        "language": "typescript",
+        "autoFix": true
+        },
+        {
+        "language": "typescriptreact",
+        "autoFix": true
+        }
+    ],
 
     "emmet.triggerExpansionOnTab": true,
 
