@@ -4,3 +4,6 @@ alias yart='yarn start'
 alias yald='yarn build'
 alias gpp='git pull --prune'
 alias gbsc='git branch --sort=-committerdate'
+
+alias kgpa-pending='kgpa --field-selector status.phase=Pending --sort-by=.status.startTime'
+alias kgpa-failed='kgpa --field-selector status.phase=Failed --sort-by=.status.startTime'
