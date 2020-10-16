@@ -100,6 +100,8 @@ inoremap jj <esc>
 
 nnoremap <Tab> :tabn<CR>
 nnoremap <S-Tab> :tabp<CR>
+nnoremap <leader>] :bnext<CR>
+nnoremap <leader>[ :bprev<CR>
 ":nmap <Tab> <C-w>w
 ":nmap <S-Tab> <C-w>W
 nnoremap <leader>ff :FufFile<CR>
