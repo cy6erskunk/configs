@@ -2,6 +2,8 @@ alias pyhttp='python -m SimpleHTTPServer'
 
 alias yart='yarn start'
 alias yald='yarn build'
+alias yat='yarn test '
+alias yatnc='yarn test --no-coverage '
 alias gpp='git pull --prune'
 alias gbsc='git branch --sort=-committerdate'
 
