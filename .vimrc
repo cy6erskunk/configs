@@ -1,32 +1,33 @@
-set nocompatible " зачем совместимость с vi?
+set nocompatible " disable vi compatibility
 
 filetype off " required by vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'vim-scripts/xml.vim'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'vim-scripts/xml.vim'
+
+call vundle#end()
 
 filetype plugin on
 filetype indent on
 
-syntax on " Подсветка синтаксиса
+syntax on
 
-set sw=4 " Сдвиг при использовании > или <
-set ts=4 " Размер tab
+set sw=4 " Shift when using > or <
+set ts=4 " tab size
 set softtabstop=4
-set expandtab " заменять табы на пробелы
+set expandtab " replace tabs with spaces
 
 set ai " autoindent
 set smartindent
@@ -43,14 +44,14 @@ set t_Co=256
     "colorscheme default
 "endif
 
-set dir=~/tmp " хранить swp файлы в ~/tmp
+set dir=~/tmp " save files in ~/tmp
 
 set bs=2
-set list " показывать спецсимволы
+set list " show special symbols
 set number
-set ruler " показывать номера строк и стобцов внизу экрана
+set ruler " show line number and columns in the status bar
 set showcmd
-set showmode " показывать текущий режим
+set showmode " show current mode
 set laststatus=2 "always show status bar
 function! ShowUtf8Sequence()
     let p = getpos('.')
@@ -60,7 +61,7 @@ function! ShowUtf8Sequence()
     call setpos('.', p)
     return matchstr(utfseq, '\x .*\x')
 endfunction
-set statusline=%<%2*%f%*\ %{&ff}\ %{&encoding}\ %y%h%m%r\ %{fugitive#statusline()}%=%1*0x%03B%-5{ShowUtf8Sequence()}%*\ %-14.(%l,%c%V%)\ %P
+set statusline=%<%2*%f%*\ %{&ff}\ %{&encoding}\ %y%h%m%r\ %{FugitiveStatusline()}%=%1*0x%03B%-5{ShowUtf8Sequence()}%*\ %-14.(%l,%c%V%)\ %P
 hi User1 term=bold,reverse cterm=bold,reverse ctermfg=236 ctermbg=031 gui=bold,reverse
 hi User2 term=bold,reverse cterm=bold,reverse ctermfg=236 ctermbg=040 gui=bold,reverse
 
@@ -68,9 +69,9 @@ set showmatch
 
 set wrap
 set textwidth=89
-set formatoptions+=r " автоматически добавлять символ коментария при переходе на новую строку при редактировании комментария
+set formatoptions+=r " automatically add comment symbol in the beginning of a line when editing a comment
 
-set hlsearch " подсвечивать при поиске
+set hlsearch " highlight on search
 set incsearch
 set ignorecase
 set smartcase
@@ -92,7 +93,7 @@ nnoremap <leader>v <C-w>v<C-w>l
 "Map code completion to , + tab
 imap <leader><tab> <C-x><C-o>
 
-" Маппинги
+" Mappings
 nnoremap <leader>n :tabnew 
 nnoremap <ENTER> :
 nnoremap <SPACE> :!
