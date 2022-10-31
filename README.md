@@ -5,14 +5,18 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
 ## Installation
 1. Clone repo to your home directory:
 
-    ```https://github.com/cy6erskunk/configs.git --recursive```
+    ```sh
+    git clone https://github.com/cy6erskunk/configs.git --recursive
+    ```
 
     It is assumed by the installtion script, that repo is cloned to `~/configs`, which is done by default.
-2. cd to the `configs` folder and run `install.sh`:
+2. `cd` to the `configs` folder and run `install.sh`:
 
-    ```cd configs && . ./install.sh```
+    ```sh
+    cd configs && . ./install.sh
+    ```
 
-    Enter your name and email to filled in `.gitconfig` when prompted (add --no-gitconfig
+    Enter your name and email to filled in `.gitconfig` when prompted (add `--no-gitconfig`
     to `install.sh` call to skip git user name and email setting)
 
     The installer does:
