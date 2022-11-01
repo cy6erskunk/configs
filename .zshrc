@@ -90,14 +90,13 @@ source $ZSH/oh-my-zsh.sh
 #########
 # nmv (do not use together with nodenv)
 #########
-#export NVM_DIR="$HOME/.nvm"
-## do not forget to run `nvm alias default XXX` to avoid enabling 
-## that version every login
-#[[ -e /usr/local/opt/nvm/nvm.sh ]] && . "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #########
 # nodenv (do not use together with nvm)
 #########
-[ $(command -v nodenv) ] && eval "$(nodenv init -)"
+#[ $(command -v nodenv) ] && eval "$(nodenv init -)"
 
 #########
 # go
