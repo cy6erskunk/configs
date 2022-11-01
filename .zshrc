@@ -126,3 +126,8 @@ docker_parents(){
     [ $# -eq 0 ] && { echo "Usage: $0 image_hash"; return 1; }
     for i in $(docker images -q); do docker history $i|grep -q $1 && echo $i; done | sort -u
 }
+#########
+# openjdk
+#########
+[ -e /opt/homebrew/opt/openjdk@11/bin ] && export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+
