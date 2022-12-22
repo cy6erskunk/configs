@@ -1,11 +1,10 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
 ZSH_THEME="spaceship"
 # ZSH_THEME="smt"
 
@@ -16,11 +15,6 @@ alias zshconfig="vim ~/.zshrc"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -59,12 +53,6 @@ plugins=(git autojump vagrant frontend-search npm kubectl)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-#########
-# Why was it like this?
-#########
-# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-#########
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -131,3 +119,7 @@ docker_parents(){
 #########
 [ -e /opt/homebrew/opt/openjdk@11/bin ] && export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
+##########
+# starship
+##########
+eval "$(starship init zsh)"
