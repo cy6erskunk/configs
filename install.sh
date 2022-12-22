@@ -1,6 +1,6 @@
 #!/bin/bash
-files='.vimrc .gitconfig .bashrc .bash_aliases git-prompt.conf .tmux.conf'
-dirs='.vim git-prompt'
+files='.vimrc .gitconfig .bashrc .bash_aliases .tmux.conf'
+dirs='.vim'
 
 if [[  $1 != '--no-gitconfig' ]]
 then
@@ -62,11 +62,6 @@ then
     cd $pwd
 fi
 echo Done
-
-# Just in case initial 'git-clone' was called without '--recursive'
-echo ===Getting git-prompt...
-git submodule init
-git submodule update
 
 if [ -e $HOME/.bash_profile ]; then
     echo .bash_profile already exists, try addding \'. .bashrc\' to its contents
