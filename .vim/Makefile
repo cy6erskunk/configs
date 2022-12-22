@@ -6,5 +6,5 @@ plugins: vundle
 vundle: bundle/vundle
 bundle/vundle:
 	@echo "Cloning Vundle..."
-	@git clone git://github.com/gmarik/vundle.git bundle/vundle > /dev/null
+	@git clone https://github.com/VundleVim/Vundle.vim.git ./bundle/Vundle.vim > /dev/null
 	@echo "Done."
