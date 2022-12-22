@@ -1,12 +1,17 @@
 Configs
 =======
-My VIM configs, git-prompt with config bashrc and basic gitconfig.
+My VIM configs, prompt with config zshhrc and basic gitconfig.
+
+## Prerequisites
+1. [oh-my-zsh](https://ohmyz.sh)
+2. [Starship](https://starship.rs) command prompt (which requires a font with lots of glyphs, e.g. from [Nerd fonts](https://github.com/ryanoasis/nerd-fonts/))
+
 
 ## Installation
 1. Clone repo to your home directory:
 
     ```sh
-    git clone https://github.com/cy6erskunk/configs.git --recursive
+    git clone https://github.com/cy6erskunk/configs.git
     ```
 
     It is assumed by the installtion script, that repo is cloned to `~/configs`, which is done by default.
@@ -26,11 +31,10 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
         - files
             * .vimrc
             * .gitconfig
-            - .bashrc
-            - git-prompt.conf
+            - .zshrc
+            - .zshrc_aliases
         - folders
             - .vim
-            - git-prompt
     - creates `~/tmp` folder if none
     - gets Vundle
     - installs several Vim plugins using Vundle:
@@ -38,8 +42,6 @@ My VIM configs, git-prompt with config bashrc and basic gitconfig.
       - vim-easymotion
       - L9
       - FuzzyFinder
-    - tries to get submodules (just in case initial `git-clone` was called without `--recursive`)
-    - tries to symlink ~/.bash_profile to ~/.bashrc
 
 
 ## Misc
