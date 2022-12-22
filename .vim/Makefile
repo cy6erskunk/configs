@@ -1,6 +1,7 @@
 plugins: vundle
 	@echo "Cloning plug-ins..."
 	@vim +BundleInstall +qall
+	@touch .done
 	@echo "Done."
 
 vundle: bundle/vundle
