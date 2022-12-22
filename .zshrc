@@ -5,8 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="spaceship"
-# ZSH_THEME="smt"
+# ZSH_THEME="spaceship"
 
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
@@ -120,6 +119,6 @@ docker_parents(){
 [ -e /opt/homebrew/opt/openjdk@11/bin ] && export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
 ##########
-# starship
+# starship - make sure there's no ZSH_THEME enabled
 ##########
 eval "$(starship init zsh)"
