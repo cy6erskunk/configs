@@ -1,5 +1,5 @@
 #!/bin/bash
-files='.vimrc .gitconfig .bashrc .bash_aliases .tmux.conf'
+files='.vimrc .gitconfig .zshrc .zshrc_aliases .tmux.conf'
 dirs='.vim'
 
 if [[  $1 != '--no-gitconfig' ]]
@@ -58,15 +58,13 @@ echo ===Getting Vim bundles...
 if [ -d .vim ]
 then
     cd .vim
-    make plugins
+    if [[ -e ".done" ]]
+    then
+        echo 'Vim budles already inited (`.done` file is present)'
+    else
+        make plugins
+    fi
     cd $pwd
 fi
 echo Done
 
-if [ -e $HOME/.bash_profile ]; then
-    echo .bash_profile already exists, try addding \'. .bashrc\' to its contents
-else
-    ln -s $HOME/.bashrc $HOME/.bash_profile
-fi
-
-echo Done
