@@ -5,6 +5,7 @@ My VIM configs, prompt with config zshhrc and basic gitconfig.
 ## Prerequisites
 1. [oh-my-zsh](https://ohmyz.sh)
 2. [Starship](https://starship.rs) command prompt (which requires a font with lots of glyphs, e.g. from [Nerd fonts](https://github.com/ryanoasis/nerd-fonts/))
+3. [autojump](https://github.com/wting/autojump) - `brew install autojump`
 
 
 ## Installation
