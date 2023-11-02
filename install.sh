@@ -11,6 +11,8 @@ then
     sed -e "s/%%GIT_NAME%%/${git_name}/;s/%%GIT_EMAIL%%/${git_email}/" < ./_gitconfig > ./.gitconfig
 
     echo name: $git_name email: $git_email
+    echo Remember to add conditional includes to support different configurations for different paths
+    echo An example is provided at the end the newly created .gitconfig file 
 fi
 
 tab=$'\t'
