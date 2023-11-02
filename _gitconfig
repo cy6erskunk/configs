@@ -19,3 +19,5 @@
 	diff = auto
 	interactive = auto
 	status = auto
+[includeIf "gitdir:~/_src/"]
+	path = ~/_src/.gitconfig
