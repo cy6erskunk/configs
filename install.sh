@@ -1,6 +1,17 @@
 #!/bin/bash
 files='.vimrc .gitconfig .zshrc .zshrc_aliases .tmux.conf'
 dirs='.vim'
+ORANGE='\033[0;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+function print_done() {
+    printf "[ ${GREEN}done${NC} ]\n"
+}
+
+function print_skipped() {
+    printf "[ ${ORANGE}skipped${NC} ]\n"
+}
 
 if [[  $1 != '--no-gitconfig' ]]
 then
@@ -19,40 +30,34 @@ tab=$'\t'
 ttab="$tab$tab$tab"
 pwd=`pwd`
 
+function iterate_items() {
+    for file in $1
+    do
+        if [ -e ~/$file ];
+        then
+            printf "$tab$file already exists in home directory${ttab}"
+            print_skipped
+        else
+            printf "${tab}creating symlink for $file...$ttab"
+            ln -s $pwd/$file ~/$file
+            print_done
+        fi
+    done
+}
+
 echo ===Creating symlinks...
-
-for file in $files
-do
-    if [ -e ~/$file ]
-    then
-        echo "$tab$file already exists in home directory"
-    else
-        echo -n "${tab}creating symlink for $file...$ttab"
-        ln -s $pwd/$file ~/$file
-        echo '[ done ]'
-    fi
-done
-
-for dir in $dirs
-do
-    if [ -e ~/$dir ]
-    then
-        echo "$tab$dir already exists in home directory"
-    else
-        echo -n "${tab}creating symlink for $dir...$ttab"
-        ln -s $pwd/$dir/ ~/$dir
-        echo '[ done ]'
-    fi
-done
+iterate_items "${files}"
+iterate_items "${dirs}"
 echo Done
 
 echo ===Creating ~/tmp folder
 if [ -e ~/tmp ]
 then
     echo "${tab}~/tmp already exists"
+    print_skipped
 else
     mkdir ~/tmp
-    echo Done
+    print_done
 fi
 
 echo ===Getting Vim bundles...
