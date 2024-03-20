@@ -47,7 +47,7 @@ COMPLETION_WAITING_DOTS="true"
 #########
 # autojump has to be installed first (`brew install autojump`)
 #########
-plugins=(git autojump frontend-search npm kubectl)
+plugins=(git autojump frontend-search npm kubectl asdf)
 
 source $ZSH/oh-my-zsh.sh
 
