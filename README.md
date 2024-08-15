@@ -21,7 +21,7 @@ My VIM configs, prompt with config zshhrc and basic gitconfig.
 2. `cd` to the `configs` folder and run `install.sh`:
 
     ```sh
-    cd configs && . ./install.sh
+    cd configs && ./install.sh
     ```
 
     Enter your name and email to filled in `.gitconfig` when prompted (add `--no-gitconfig`
