@@ -6,7 +6,7 @@ My VIM configs, prompt with config zshhrc and basic gitconfig.
 1. [iTerm2](https://iterm2.com/downloads.html)
 2. [Homebrew](https://brew.sh/)
 3. [oh-my-zsh](https://ohmyz.sh)
-4. [Starship](https://starship.rs) command prompt (which requires a font with lots of glyphs, e.g. from [Nerd fonts](https://github.com/ryanoasis/nerd-fonts/), e.g., `brew install font-hack-nerd-font`)
+4. [Starship](https://starship.rs) command prompt - `brew install starship` - (which requires a font with lots of glyphs, e.g. from [Nerd fonts](https://github.com/ryanoasis/nerd-fonts/), e.g., `brew install font-hack-nerd-font` or `brew install  font-fira-code-nerd-font`)
 5. [autojump](https://github.com/wting/autojump) - `brew install autojump`
 
 
