@@ -24,7 +24,7 @@ function iterate_items() {
             print_skipped
         else
             printf "${tab}creating symlink for $file...$tab"
-            ln -s $pwd/$file ~/$file
+            ln -s $(pwd)/$file ~/$file
             print_done
         fi
     done
