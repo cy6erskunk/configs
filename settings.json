@@ -1,6 +1,5 @@
 {
     "breadcrumbs.enabled": true,
-
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
@@ -11,35 +10,21 @@
     ],
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
-
-/* disable vscode js validation to use eslint: */
+    /* disable vscode js validation to use eslint: */
     // "javascript.validate.enable": false,
-/* disable vscode TS validation to use eslint: */
+    /* disable vscode TS validation to use eslint: */
     // "typescript.validate.enable": false,
-    "eslint.autoFixOnSave": true,
-    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
     "eslint.validate": [
         "javascript",
         "javascriptreact",
-        {
-        "language": "typescript",
-        "autoFix": true
-        },
-        {
-        "language": "typescriptreact",
-        "autoFix": true
-        }
+        "typescript",
+        "typescriptreact"
     ],
-
     "emmet.triggerExpansionOnTab": true,
-
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
     "gitlens.keymap": "alternate",
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
-
     "indentRainbow.colors": [
         "rgba(16,16,16,0.1)",
         "rgba(16,16,16,0.2)",
@@ -52,22 +37,17 @@
         "rgba(16,16,16,0.9)",
         "rgba(16,16,16,1.0)"
     ],
-    "terminal.integrated.rendererType": "dom",
-    "vsicons.dontShowNewVersionMessage": true,
     "window.zoomLevel": 0,
-    "workbench.activityBar.visible": true,
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "vs-seti",
     "workbench.sideBar.location": "right",
     "workbench.editor.enablePreviewFromQuickOpen": false,
-
     "[javascript]": {
         "editor.formatOnSave": false
     },
     "[json]": {
         "editor.formatOnSave": false
     },
-
     "[jsonc]": {
         "editor.formatOnSave": false
     },
