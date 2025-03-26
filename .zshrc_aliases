@@ -1,4 +1,4 @@
-alias pyhttp='python -m SimpleHTTPServer'
+alias pyhttp='python -m http.server'
 
 alias yart='yarn start'
 alias yald='yarn build'
